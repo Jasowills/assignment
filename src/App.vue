@@ -66,6 +66,9 @@
     </div>
   </section>
 
+  <section>
+    <googleMap />
+  </section>
   <section class="contact" id="contact">
     <div class="header">
       <h2>Contact Me</h2>
@@ -83,6 +86,14 @@
 </template>
 
 <script>
+import googleMap from './components/googleMap.vue'
+
+export default {
+  components: {
+    googleMap
+  }
+}
+
 </script>
 
 <style>
