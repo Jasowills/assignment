@@ -46,21 +46,28 @@
   
   .map-wrap {
     position: relative;
-    width: 500px;
-    height: 500px;
+    width: 450px;
+    height: 400px;
     border:  1px solid #000;
+    border-radius: 20px;
+    /* box-shadow: 0 6px 15px 0 #cfcece; */
   }
   
   .map {
     position: absolute;
     width: 100%;
     height: 100%;
+    border-radius: inherit;
   }
   
   .watermark {
-    position: absolute;
-    left: 10px;
-    bottom: 10px;
-    z-index: 999;
+    display: none;
+  }
+  @media screen and (max-width: 900px) {
+    .map-wrap{
+      height: 300px;
+      width: 430px;
+      margin-left: 20px;
+    }
   }
   </style>

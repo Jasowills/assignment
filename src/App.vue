@@ -66,22 +66,23 @@
     </div>
   </section>
 
-  <section>
-    <googleMap />
-  </section>
+  
   <section class="contact" id="contact">
     <div class="header">
-      <h2>Contact Me</h2>
-    </div>
-    <div class="form">
-      <form action="" method="post">
-        <input v-model="text" placeholder="Fullname" required>
-        <input v-model="email" placeholder="Email Address" required>
-        <textarea v-model="message" placeholder="message"></textarea>
-
-        <button type="submit">Submit</button>
-      </form>
-    </div>
+    <h2>Contact Me</h2>
+  </div>
+    <section>
+        <googleMap />
+      <div class="form">
+        <form action="" method="post">
+          <input v-model="text" placeholder="Fullname" required>
+          <input v-model="email" placeholder="Email Address" required>
+          <textarea v-model="message" placeholder="message"></textarea>
+          
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </section>
   </section>
 </template>
 
@@ -114,6 +115,7 @@ export default {
   height: 60px;
   box-shadow: 0 0 5px 0 #000;
   padding: 0 10px;
+  z-index: 999;
 }
 
 .logo {
@@ -245,19 +247,24 @@ export default {
   background-color: #6969ee;
 }
 .contact{
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  place-items: center;
   width: 100%;
   padding: 0 30px;
   align-items: center;
   height: 400px;
   margin-top: 30px;
 }
+.contact section{
+  display: flex;
+  justify-content: space-between;
+  width: 95%;
+}
 .contact .header{
   width: 40%;
   display: grid;
   place-items: center;
-
+  margin-bottom: 30px;
 }
 .contact .form{
   width: 60%;
@@ -337,7 +344,19 @@ export default {
   justify-content: center;
   align-items: center;
   width: 100%;
+  height: 800px;
 }
+/* .contact{
+    width: 100%;
+    display: grid;
+    place-items: center;
+  } */
+  .contact section{
+  display: grid;
+  width: 100%;
+  place-items: center;
+}
+
 .contact .header{
   width: 400px;
   display: grid;
@@ -353,6 +372,19 @@ export default {
   width: 100%;
   height: 300px;
   margin-top: 20px;
+}
+
+}
+@media screen and (max-width: 800px) {
+  .contact{
+    width: 100%;
+    display: grid;
+    place-items: center;
+  }
+  .contact section{
+  display: grid;
+  width: 100%;
+  place-items: center;
 }
 }
 </style>
