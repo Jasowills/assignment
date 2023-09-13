@@ -149,7 +149,7 @@ export default {
 .navbar {
   display: flex;
   justify-content: space-between;
-  align-iztems: center;
+  align-items: center;
   background: #6969ee;
   position: fixed;
   top: 0;
