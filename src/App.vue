@@ -15,7 +15,9 @@
   </section>
 
   <section class="about" id="about">
-    <div class="image">input an image</div>
+    <div class="image">
+      <img src="../src/assets/portfolio.jpg" alt="my image">
+    </div>
     <div class="description">
       <h2>About Me</h2>
       <p>
@@ -127,6 +129,7 @@
 
 <script>
 import googleMap from './components/googleMap.vue'
+// import Portfolio from './assets/portfolio.jpg'
 
 export default {
   components: {
@@ -209,10 +212,17 @@ export default {
   width: 25%;
   display: grid;
   place-items: center;
-  border: 1px solid #000;
+  /* border: 1px solid #000; */
   height: 300px;
   margin-top: 50px;
   margin-left: 30px;
+}
+
+.about .image img{
+  /* width: 100%; */
+  height: 330px;
+  border-radius: 10px;
+  box-shadow: 0 6px 15px 0 #808080;
 }
 
 .about .description {
