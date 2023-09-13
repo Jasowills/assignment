@@ -1,6 +1,6 @@
 <template>
   <div class="navbar">
-    <div class="logo">My Portfolio</div>
+    <div class="logo">Portfolio</div>
 
     <ul>
       <li><a href="#home">Home</a></li>
@@ -75,7 +75,7 @@
       <h2>Contact Me</h2>
     </div>
     <section>
-      <googleMap />
+      <googleMap class="map-style"/>
       <div class="form">
         <form action="" method="post">
           <input v-model="text" placeholder="Fullname" required>
@@ -418,8 +418,16 @@ footer ul li span svg{
   }
 
   .about .image {
-    width: 70%;
+    width: 100%;
+    display: grid;
+    place-items: center;
   }
+  .about .image img{
+  /* width: 100%; */
+  height: 330px;
+  border-radius: 10px;
+  box-shadow: 0 6px 15px 0 #808080;
+}
 
   .about .description {
     width: 100%;
@@ -443,24 +451,29 @@ footer ul li span svg{
     width: 350px;
   }
 
-  .contact {
+  /* .contact {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
     height: 800px;
-  }
+  } */
 
-  /* .contact{
+  .contact{
     width: 100%;
     display: grid;
     place-items: center;
-  } */
+    height: 800px;
+  }
   .contact section {
     display: grid;
     width: 100%;
     place-items: center;
+  }
+
+  .contact .map-style{
+    width: 300px;
   }
 
   .contact .header {
@@ -499,4 +512,60 @@ footer ul li span svg{
     width: 100%;
     place-items: center;
   }
-}</style>
+}
+
+@media screen and (max-width: 500px) {
+  .contact{
+    display: grid;
+    width: 100%;
+    place-items: center;
+    margin-bottom: -40px;
+  }
+  .navbar ul{
+    margin-left: 23px;
+    margin-top: 4px;
+  }
+  .about{
+    display: grid;
+    place-items: center;
+    width: 90%;
+  }
+  .about .image{
+    width: 100%;
+    display: grid;
+  }
+  .about .image img{
+    display: block;
+    margin: auto;
+    box-shadow: none;
+    margin-left: -10px;
+    margin-bottom: 10px;
+  }
+  .about .description{
+    width: 90%;
+    display: grid;
+    place-items: center;
+    margin-top: 10px;
+  }
+  footer{
+    height: 250px;
+  }
+
+  footer ul{
+    width: 100%;
+    display: grid;
+    place-items: center;
+    gap: 20px;
+  }
+  .work{
+    width: 100%;
+    display: grid;
+    place-items: center;
+  }
+  .contact .header{
+    width: 100%;
+    display: grid;
+    place-items: center;
+  }
+}
+</style>
